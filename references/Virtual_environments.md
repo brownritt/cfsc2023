@@ -32,6 +32,20 @@ This will also make a file that can be used with "create", but will list only th
 
 We suggest including both types of environment files in your repos. The more explicit version is needed for reproducibility, but if anything goes wrong, the minimal version communicates what you intended to set up.
 
+### Adding new packages
+
+If an environment already exists and **it is currently activated**, you can add new packages to it with
+
+
+```
+conda install <PACKAGENAME>
+```
+
+Again, this will install packages in whatever the currently active environment is.
+
+It is good practice to export a new environment file after changes, so that the file remains accurate.
+
+
 ### Other environment and installation choices
 
 While `conda` is accessible and popular, there are other options to do the same kind of work. Some people have strong opinions about these sorts of things, and there are real differences between the options. Not every package is available through every package manager, some are much faster and/or efficient than others, and so on.

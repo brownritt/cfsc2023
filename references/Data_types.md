@@ -17,6 +17,7 @@ Since we often deal with much larger sets of information, we use metric system p
 - *tera*, T = trillion, $10^{12}$
 - *peta*, P = $10^{15}$
 - *exa*, E = $10^{18}$
+
 The exact number of bytes allocated in a computer is typically a power of two, so the above prefixes are an approximation. For example, a kilobyte, `1 KB`, is often 1024 bytes ($=2^{10}$) instead of 1000. There are special conventions for notating exact vs inexact prefixes, but none are universally accepted.
 
 For a sense of scale, a laptop with sixteen gigabytes (`16 GB`) of memory can represent about $16\times 10^{9}\times 256 = 4\times 10^{12}$ different states, or is equivalent to a switchboard with about 4 trillion On/Off switches. The size of the internet has been estimated (for now...) to be on the order of 10,000 to 100,000 exabytes.
@@ -65,7 +66,7 @@ You can try to force a conversion using operators that have the same name as the
 
 Any operation that makes sense only for integers, such as specifying an index into an array, may throw an error if you use a float, even if the value of that float is a whole number. Operations often check for a correct data type, not the value. One then needs to convert with `int()` for the operation to work. For example, `range(1,2)` is valid, `range(1,2.0)` throws an error, and `range(1,int(2.0))` is again valid.
 
-Another very common conversion is from Boolean to integer under addition; each `True` is replaced by 1, and each `False` by 0. This provides a convenient way to count the number of `True` values in an array. For example, `True+False` returns `1`, and `np.sum([True,False,True])` produces `2`. A little less obvious is that `True*4` returns `4` and `False*4` returns `0`, but this conversion is sometimes usful in making a "mask" (all values in an array matching a `True` are kept as is, and all values matching a `False` are set to zero).
+Another very common conversion is from Boolean to integer under addition; each `True` is replaced by 1, and each `False` by 0. This provides a convenient way to count the number of `True` values in an array. For example, `True+False` returns `1`, and `np.sum([True,False,True])` produces `2`. A little less obvious is that `True*4` returns `4` and `False*4` returns `0`, but this conversion is sometimes useful in making a "mask" (all values in an array matching a `True` are kept as is, and all values matching a `False` are set to zero).
 
 ### String
 
